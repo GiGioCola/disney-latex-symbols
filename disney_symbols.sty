@@ -1,5 +1,13 @@
+% disney_symbols.sty
+% Author: GGC
+% Description: A LaTeX package for using Disney character symbols
+% Version: 1.0
+% Date: 2025-04-30
+% License: MIT
+
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{disney}[2019/06/04 Local macros by GGC]
+
+\ProvidesPackage{disney_symbols}[2025/04/30 v1.0 Disney Character Symbols]
 
 \RequirePackage{tikz}
 
@@ -16,7 +24,7 @@
 \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (417.25,3267.5) .. controls (417.25,3249.69) and (431.69,3235.25) .. (449.5,3235.25) .. controls (467.31,3235.25) and (481.75,3249.69) .. (481.75,3267.5) .. controls (481.75,3285.31) and (467.31,3299.75) .. (449.5,3299.75) .. controls (431.69,3299.75) and (417.25,3285.31) .. (417.25,3267.5) -- cycle ;
 \end{tikzpicture}%
 }
-\newcommand{\mickey}[1][0.5]{
+\newcommand{\disneyMickeyWhite}[1][0.5]{
 \scalebox{#1}{\mickeyA}
 }
 
@@ -34,7 +42,7 @@
     \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (245.07,3226.14) .. controls (245.07,3221.66) and (248.74,3218.03) .. (253.28,3218.03) .. controls (257.82,3218.03) and (261.5,3221.66) .. (261.5,3226.14) .. controls (261.5,3230.62) and (257.82,3234.25) .. (253.28,3234.25) .. controls (248.74,3234.25) and (245.07,3230.62) .. (245.07,3226.14) -- cycle ;
 \end{tikzpicture}
 }
-\newcommand{\BlackMickey}[1][1]{
+\newcommand{\disneyMickeyBlack}[1][1]{
 \scalebox{#1}{\mickeyB}
 }
 
@@ -81,7 +89,7 @@
 \draw  [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ][fill={rgb, 255:red, 65; green, 117; blue, 5 }  ,fill opacity=1 ] (346.84,183.36) .. controls (338.85,182.95) and (332.62,177.87) .. (332.93,172.02) .. controls (333.23,166.16) and (339.95,161.75) .. (347.93,162.16) .. controls (355.92,162.57) and (362.15,167.65) .. (361.85,173.51) .. controls (361.49,180.57) and (361.31,184.11) .. (361.3,184.11) .. controls (361.31,184.11) and (356.48,183.86) .. (346.84,183.36) -- cycle ;
 \end{tikzpicture}
 }
-\newcommand{\goofy}[1][0.75]{
+\newcommand{\disneyGoofy}[1][0.75]{
 \scalebox{#1}{\goofyT}
 }
 
@@ -171,7 +179,7 @@
 \draw    (136.44,152.72) .. controls (137,172.57) and (104,190.57) .. (87,188.57) .. controls (70,186.57) and (53,174.57) .. (69,137) ;
 \end{tikzpicture}
 }
-\newcommand{\minnie}[1][0.75]{
+\newcommand{\disneyMinnie}[1][0.75]{
 \scalebox{#1}{\minnieT}
 }
 
@@ -209,7 +217,7 @@
 \draw    (422.92,3445.64) -- (425.9,3449.67) ;
 \end{tikzpicture}
 }
-\newcommand{\What}[1][0.75]{
+\newcommand{\disneyHat}[1][0.75]{
 \scalebox{#1}{\WhatT}
 }
 
@@ -261,7 +269,7 @@
 \end{tikzpicture}
 }
 
-\newcommand{\MickeyFaceBN}[1][0.75]{
+\newcommand{\disneyMickeyBW}[1][0.75]{
 \scalebox{#1}{\MickeyFaceBNT}
 }
 
@@ -314,7 +322,7 @@
 \end{tikzpicture}
 }
 
-\newcommand{\MickeyFace}[1][0.75]{
+\newcommand{\disneyMickey}[1][0.75]{
 \scalebox{#1}{\MickeyFaceT}
 }
 
@@ -375,7 +383,7 @@
 \end{tikzpicture}
 }
 
-\newcommand{\PKshield}[1][0.75]{
+\newcommand{\disneyPKshield}[1][0.75]{
 \scalebox{#1}{\PKshieldT}
 }
 
@@ -403,7 +411,7 @@
 \draw [color={rgb, 255:red, 74; green, 74; blue, 74 }  ,draw opacity=1 ]   (111.83,101) -- (125.84,93.11) ;
 \end{tikzpicture}
 }
-\newcommand{\daisy}[1][0.75]{
+\newcommand{\disneyDaisy}[1][0.75]{
 \scalebox{#1}{\daisyT}
 }
 
@@ -430,7 +438,7 @@
 \draw [fill={rgb, 255:red, 145; green, 0; blue, 0 }  ,fill opacity=1 ]   (16.98,89.11) .. controls (62.8,57.7) and (65.57,131.05) .. (107.78,80.48) .. controls (149.99,29.92) and (124.8,110.01) .. (123.49,104.67) ;
 \end{tikzpicture}
 }
-\newcommand{\Qui}[1][0.75]{
+\newcommand{\disneyHuey}[1][0.75]{
 \scalebox{#1}{\HueyT}
 }
 
@@ -456,7 +464,7 @@
 \draw [fill={rgb, 255:red, 0; green, 138; blue, 182 }  ,fill opacity=1 ]   (21.98,79.11) .. controls (67.8,47.7) and (70.57,121.05) .. (112.78,70.48) .. controls (154.99,19.92) and (129.8,100.01) .. (128.49,94.67) ;
 \end{tikzpicture}
 }
-\newcommand{\Quo}[1][0.75]{
+\newcommand{\disneyDewey}[1][0.75]{
 \scalebox{#1}{\DeweyT}
 }
 
@@ -482,7 +490,7 @@
 \draw [fill={rgb, 255:red, 61; green, 122; blue, 0 }  ,fill opacity=1 ]   (19.98,79.11) .. controls (65.8,47.7) and (68.57,121.05) .. (110.78,70.48) .. controls (152.99,19.92) and (127.8,100.01) .. (126.49,94.67) ;
 \end{tikzpicture}
 }
-\newcommand{\Qua}[1][0.75]{
+\newcommand{\disneyLouie}[1][0.75]{
 \scalebox{#1}{\LouieT}
 }
 
