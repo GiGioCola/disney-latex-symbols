@@ -27,8 +27,8 @@ The compiled PDF `docs/preview.pdf` shows all available character commands.
 
 ## 📁 Files in this repo
 - `disney_symbols.sty` — the package file
-- `example.tex` — sample document using the package
-- `docs/preview.pdf` — preview of symbols
+- `disney_example.tex` — sample document using the package
+- `disney_example.pdf` — preview of symbols
 - `LICENSE` — license info
   
 ## ⚠️ Legal Note
