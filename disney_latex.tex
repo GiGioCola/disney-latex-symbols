@@ -1,226 +1,125 @@
+\documentclass{article}
+\usepackage{disney_symbols}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+
 \section{Disney simbols}
 
-All the symbols in this section are grouped together in the package \verb|disney|. In order to create your own package (follow the instructions \href{https://www.overleaf.com/learn/latex/Writing_your_own_package}{here}) create a \verb|.sty| file and write the commands inside:
-\begin{verbatim}
-    \NeedsTeXFormat{LaTeX2e}
-    \ProvidesPackage{examplepackage}[2014/08/21 Example package]
-     
-    \RequirePackage{imakeidx}
-    \RequirePackage{xstring}
-    \RequirePackage{xcolor}
-    \definecolor{greycolour}{HTML}{525252}
-    \definecolor{sharelatexcolour}{HTML}{882B21}
-    \definecolor{mybluecolour}{HTML}{394773}
-    \newcommand{\wordcolour}{greycolour}
-\end{verbatim}
-In the case of \verb|disney.sty| you will have
-\begin{verbatim}
-    \NeedsTeXFormat{LaTeX2e}
-    \ProvidesPackage{disney}[2019/06/04 Local macros by GGC]
+
+Here are some Disney characters:
+
+\begin{itemize}
+
+    \item Disney logo: 
+        \begin{center}
+            \Disney \Disney[0.5] \Disney[0.25]
+        \end{center}
+        is obtained with 
+        \begin{verbatim}
+            \Disney \Disney[0.5] \Disney[0.25]
+        \end{verbatim}
+        
+    \item Mickey (White): 
+        \begin{center}
+            \disneyMickeyWhite \disneyMickeyWhite[0.25] \disneyMickeyWhite[0.15]
+        \end{center}
+        is obtained with 
+        \begin{verbatim}
+            \disneyMickeyWhite \disneyMickeyWhite[0.25] \disneyMickeyWhite[0.15]
+        \end{verbatim}
     
-    \RequirePackage{tikz}
-\end{verbatim}
-and then the following declarations of commands.
+    \item Mickey (Black): 
+        \begin{center}
+            \disneyMickeyBlack \disneyMickeyBlack[0.5] \disneyMickeyBlack[0.25]
+        \end{center}
+        is obtained with 
+        \begin{verbatim}
+            \disneyMickeyBlack \disneyMickeyBlack[0.5] \disneyMickeyBlack[0.25]
+        \end{verbatim}
 
-\begin{example}[Personalized Mickey command: white shape]
-    It is fun to create your own commands.
-    \smallskip\begin{adjustwidth}{-1.5cm}{-0.5cm}\begin{verbatim}
-        \newcommand{\mickeyA}[1]{%
-            \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-            %Shape: Circle  
-            \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ]
-            (402,3234.75) .. controls (402,3224.95) and (409.95,3217) .. (419.75,3217) ..
-            controls (429.55,3217) and (437.5,3224.95) .. (437.5,3234.75) .. 
-            controls (437.5,3244.55) and (429.55,3252.5) .. (419.75,3252.5) .. 
-            controls (409.95,3252.5) and (402,3244.55) .. (402,3234.75) -- cycle ;
-            %Shape: Circle 
-            \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] 
-            (463,3234.75) .. controls (463,3224.95) and (470.95,3217) .. (480.75,3217) .. 
-            controls (490.55,3217) and (498.5,3224.95) .. (498.5,3234.75) .. 
-            controls (498.5,3244.55) and (490.55,3252.5) .. (480.75,3252.5) .. 
-            controls (470.95,3252.5) and (463,3244.55) .. (463,3234.75) -- cycle ;
-            %Shape: Circle 
-            \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] 
-            (417.25,3267.5) .. controls (417.25,3249.69) and (431.69,3235.25) .. (449.5,3235.25)
-            .. controls (467.31,3235.25) and (481.75,3249.69) .. (481.75,3267.5) .. 
-            controls (481.75,3285.31) and (467.31,3299.75) .. (449.5,3299.75) .. 
-            controls (431.69,3299.75) and (417.25,3285.31) .. (417.25,3267.5) -- cycle ;
-            \end{tikzpicture}%
-        }
-        \newcommand{\mickey}[1][0.5]{
-            \scalebox{#1}{\mickeyA}
-        }
-    \end{verbatim}\end{adjustwidth}\smallskip
-    So that when writing \verb|\mickey| you will obtain \mickey and with  \verb|\mickey[0.25]|: \mickey[0.25] or \verb|\mickey[0.15]|: \mickey[0.15]
-\end{example}
+    \item Mickey's face - black \& white version:
+        \begin{center}
+            \MickeyFaceBN \MickeyFaceBN[0.5] \MickeyFaceBN[0.25] \MickeyFaceBN[0.15]
+        \end{center}
+        is obtained with 
+        \begin{verbatim}
+            \MickeyFaceBN \MickeyFaceBN[0.5] \MickeyFaceBN[0.25] \MickeyFaceBN[0.15]
+        \end{verbatim}
 
-\begin{example}[Personalized Mickey command: black shape]
-    It is fun to create your own commands.
-    \smallskip\begin{adjustwidth}{-1.5cm}{-0.5cm}\begin{verbatim}
-        \newcommand{\mickeyB}[1]{%
-            \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-             %Flowchart: Connector [id:dp7696519273110933] 
-            \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] 
-            (226.2,3240.74) .. controls (226.2,3232.9) and (232.55,3226.54) .. 
-            (240.4,3226.54) ..
-            controls (248.24,3226.54) and (254.6,3232.9) .. (254.6,3240.74) .. 
-            controls (254.6,3248.58) and (248.24,3254.94) .. (240.4,3254.94) .. 
-            controls (232.55,3254.94) and (226.2,3248.58) .. (226.2,3240.74) -- cycle ;
-            %Flowchart: Connector [id:dp5374695404168686] 
-            \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] 
-            (219.5,3226.14) .. controls (219.5,3221.66) and (223.18,3218.03) .. 
-            (227.72,3218.03) .. 
-            controls (232.26,3218.03) and (235.93,3221.66) .. (235.93,3226.14) .. 
-            controls (235.93,3230.62) and (232.26,3234.25) .. (227.72,3234.25) .. 
-            controls (223.18,3234.25) and (219.5,3230.62) .. (219.5,3226.14) -- cycle ;
-            %Flowchart: Connector [id:dp4084715160779109] 
-            \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ]
-            (245.07,3226.14) .. controls (245.07,3221.66) and (248.74,3218.03) .. 
-            (253.28,3218.03) .. controls (257.82,3218.03) and (261.5,3221.66) .. (261.5,3226.14) 
-            .. controls (261.5,3230.62) and (257.82,3234.25) .. (253.28,3234.25) .. 
-            controls (248.74,3234.25) and (245.07,3230.62) .. (245.07,3226.14) -- cycle ;
-        \end{tikzpicture}
-        }
-        \newcommand{\BlackMickey}[1][1]{
-        \scalebox{#1}{\mickeyB}
-        }
-    \end{verbatim}\end{adjustwidth}\smallskip
-    So that when writing \verb|\BlackMickey| you will obtain \BlackMickey and with  \verb|\mickey[0.5]|: \BlackMickey[0.5] or \verb|\mickey[0.15]|: \BlackMickey[0.25]
-\end{example}
+    \item Mickey's face - colored version:
+        \begin{center}
+            \MickeyFace \MickeyFace[0.5] \MickeyFace[0.25] \MickeyFace[0.15]
+        \end{center}
+        is obtained with 
+        \begin{verbatim}
+            \MickeyFace \MickeyFace[0.5] \MickeyFace[0.25] \MickeyFace[0.15]
+        \end{verbatim}
 
-\begin{example}[Disney ``D'' logo]
-    \smallskip\begin{adjustwidth}{-1.5cm}{-0.5cm}\begin{verbatim}
-        \newcommand{\DDisney}{%
-        \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-        %Curve Lines [id:da3250373097911876] 
-        \draw [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ]
-        [line width=2.25]    (620,3423.13) .. controls (628.48,3416.77) and 
-        (649.47,3428.22) .. (651.38,3436.27) .. controls (653.29,3444.33) and 
-        (650.53,3445.39) .. (646.71,3446.24) .. controls (642.9,3447.09) and 
-        (636.96,3447.09) .. (633.15,3446.03) .. controls (629.33,3444.97) and 
-        (622.7,3440.57) .. (624.03,3439.24) .. controls (625.35,3437.92) and 
-        (629.97,3436.27) .. (633.36,3435.85) .. controls (636.75,3435.42) and 
-        (642.47,3436.7) .. (643.96,3437.97) .. controls (645.44,3439.24) and 
-        (646.08,3442.21) .. (642.9,3440.73) ;
-        %Curve Lines [id:da1917361451385975] 
-        \draw [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ]
-        [line width=2.25] [line join = round][line cap = round]   (634.42,3431.18)
-        .. controls (634.42,3437.26) and (633.89,3443.55) .. (633.89,3449.63) ;
-        %Shape: Free Drawing [id:dp9463126139626299] 
-        \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ]
-        [line width=2.25] [line join = round][line cap = round] (620.21,3423.13)
-        .. controls (620.94,3423.71) and (621.57,3424.4) .. (622.54,3424.4) ;
-        %Shape: Free Drawing [id:dp11405835971272671] 
-        \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ]
-        [line width=2.25] [line join = round][line cap = round] (643.53,3441.36)
-        .. controls (643.09,3440.69) and (643.13,3440.34) .. (642.69,3439.67) ;
-        \end{tikzpicture}%
-        }
-        \newcommand{\Disney}[1][0.75]{
-            \scalebox{#1}{\DDisney}
-        }
-    \end{verbatim}\end{adjustwidth}\smallskip
-    So that when writing \verb|\Disney| you will obtain \Disney and with  \verb|\Disney[0.5]|: \Disney[0.5] or \verb|\Disney[0.25]|: \Disney[0.25]
-\end{example}
 
-\begin{example}[Goofy's hat]
-    \\
-    \smallskip 
-    \begin{center}
-        \goofy \goofy[0.5] \goofy[0.25] \goofy[0.15]
-    \end{center}
-    is obtained with 
-    \begin{verbatim}
-        \goofy \goofy[0.5] \goofy[0.25] \goofy[0.15]
-    \end{verbatim}
-\end{example}
+    \item Donald: %TODO: \disneyDonald
+    
+    \item Goofy: 
+        \begin{center}
+            \disneyGoofy \disneyGoofy[0.5] \disneyGoofy[0.25] \disneyGoofy[0.15]
+        \end{center}
+        is obtained with 
+        \begin{verbatim}
+            \disneyGoofy \disneyGoofy[0.5] \disneyGoofy[0.25] \disneyGoofy[0.15]
+        \end{verbatim}
+    
+    \item Minnie: 
+        \begin{center}
+            \disneyMinnie \disneyMinnie[0.5] \disneyMinnie[0.25] \disneyMinnie[0.15]
+        \end{center}
+        is obtained with 
+        \begin{verbatim}
+            \disneyMinnie \disneyMinnie[0.5] \disneyMinnie[0.25] \disneyMinnie[0.15]
+        \end{verbatim}
+    
+    \item Pluto: %TODO: \disneyPluto
 
-\begin{example}[Minnie's bow]
-    \\
-    \smallskip 
-    \begin{center}
-        \minnie \minnie[0.5] \minnie[0.25] \minnie[0.15]
-    \end{center}
-    is obtained with 
-    \begin{verbatim}
-        \minnie \minnie[0.5] \minnie[0.25] \minnie[0.15]
-    \end{verbatim}
-\end{example}
+    \item Sorcerer's hat - white version:
+        \begin{center}
+            \What[2] \What[1] \What \What[0.5] \What[0.25]
+        \end{center}
+        is obtained with 
+        \begin{verbatim}
+            \What[2] \What[1] \What \What[0.5] \What[0.25]
+        \end{verbatim}
+    
+    \item Pikappa's extransformer:
+        \begin{center}
+            \PKshield \PKshield[0.5] \PKshield[0.25] \PKshield[0.15]
+        \end{center}
+        is obtained with 
+        \begin{verbatim}
+            \PKshield \PKshield[0.5] \PKshield[0.25] \PKshield[0.15]
+        \end{verbatim}
 
-\begin{example}[Sorcerer's hat - white version]
-    \\
-    \smallskip 
-    \begin{center}
-        \What[2] \What[1] \What \What[0.5] \What[0.25]
-    \end{center}
-    is obtained with 
-    \begin{verbatim}
-        \What[2] \What[1] \What \What[0.5] \What[0.25]
-    \end{verbatim}
-\end{example}
+    \item Daisy's bow:
+        \begin{center}
+            \daisy \daisy[0.5] \daisy[0.25] \daisy[0.15]
+        \end{center}
+        is obtained with 
+        \begin{verbatim}
+            \daisy \daisy[0.5] \daisy[0.25] \daisy[0.15]
+        \end{verbatim}
 
-\begin{example}[Mickey's face - black \& white version]
-    \\
-    \smallskip
-    \begin{center}
-        \MickeyFaceBN \MickeyFaceBN[0.5] \MickeyFaceBN[0.25] \MickeyFaceBN[0.15]
-    \end{center}
-    is obtained with 
-    \begin{verbatim}
-        \MickeyFaceBN \MickeyFaceBN[0.5] \MickeyFaceBN[0.25] \MickeyFaceBN[0.15]
-    \end{verbatim}
-\end{example}
-
-\begin{example}[Mickey's face - colored version]
-    \\
-    \smallskip 
-    \begin{center}
-        \MickeyFace \MickeyFace[0.5] \MickeyFace[0.25] \MickeyFace[0.15]
-    \end{center}
-    is obtained with 
-    \begin{verbatim}
-        \MickeyFace \MickeyFace[0.5] \MickeyFace[0.25] \MickeyFace[0.15]
-    \end{verbatim}
-\end{example}
-
-\begin{example}[Pikappa's extransformer]
-    \\
-    \smallskip 
-    \begin{center}
-        \PKshield \PKshield[0.5] \PKshield[0.25] \PKshield[0.15]
-    \end{center}
-    is obtained with 
-    \begin{verbatim}
-        \PKshield \PKshield[0.5] \PKshield[0.25] \PKshield[0.15]
-    \end{verbatim}
-\end{example}
-
-\begin{example}[Daisy's bow]
-    \\
-    \smallskip 
-    \begin{center}
-        \daisy \daisy[0.5] \daisy[0.25] \daisy[0.15]
-    \end{center}
-    is obtained with 
-    \begin{verbatim}
-        \daisy \daisy[0.5] \daisy[0.25] \daisy[0.15]
-    \end{verbatim}
-\end{example}
-
-\begin{example}[Huey, Dewey and Louie's hats]
-    \\
-    \smallskip 
-    \begin{center}
-        \Qui \Qui[0.5] \Qui[0.25] \Qui[0.15]\\
-        \Quo \Quo[0.5] \Quo[0.25] \Quo[0.15] \\
-        \Qua \Qua[0.5] \Qua[0.25] \Qua[0.15]
-    \end{center}
-    is obtained with 
-    \begin{verbatim}
+    \item Huey, Dewey and Louie's hats:
         \begin{center}
             \Qui \Qui[0.5] \Qui[0.25] \Qui[0.15]\\
             \Quo \Quo[0.5] \Quo[0.25] \Quo[0.15] \\
             \Qua \Qua[0.5] \Qua[0.25] \Qua[0.15]
         \end{center}
-    \end{verbatim}
-\end{example}
+        is obtained with 
+        \begin{verbatim}
+            \begin{center}
+                \Qui \Qui[0.5] \Qui[0.25] \Qui[0.15]\\
+                \Quo \Quo[0.5] \Quo[0.25] \Quo[0.15] \\
+                \Qua \Qua[0.5] \Qua[0.25] \Qua[0.15]
+            \end{center}
+        \end{verbatim}
+\end{itemize}
+
+\end{document}
