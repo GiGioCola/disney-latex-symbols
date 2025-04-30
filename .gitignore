@@ -1,0 +1,36 @@
+# Compiled files
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+*.blg
+*.bbl
+*.idx
+*.ind
+*.ilg
+*.glo
+*.gls
+*.ist
+*.acn
+*.acr
+*.alg
+*.dvi
+*.fdb_latexmk
+*.synctex.gz
+*.pdf
+
+# Editors
+*.swp
+*~
+.vscode/
+.idea/
+
+# Mac
+.DS_Store
